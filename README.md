@@ -128,4 +128,4 @@ Hyperparameter Tuning:
 <h2>📈 Model Evaluation</h2>
 * Achieved 100% accuracy, precision, and recall on both training and test sets
 
-* ⚠️ Note: High performance due to small dataset; potential overfitting acknowledged
+<b>⚠️ Note: High performance due to small dataset; potential overfitting acknowledged</b>
