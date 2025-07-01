@@ -1,69 +1,118 @@
-Project Overview: Business Lead Generation for a Marketing Agency
+<h2>📈 Business Lead Generation for a Marketing Agency</h2>
+Overview
+This project was designed to generate high-quality business leads for a marketing agency with over 15 years of experience in copywriting and content marketing. The agency specializes in increasing social media engagement and driving sales for products and services. Our mission: identify businesses with strong offerings but weak digital presence—and connect them with the right help.
 
-Our project embarked on a journey to gather business leads for a marketing agency renowned for its team of copywriters and content writers with over 15 years of experience. This team's expertise lies in amplifying social media engagement and driving the sales of products and services. Here’s the story of how we did it.
+<h3>🚀 Project Goals</h3>
+Identify small to medium-sized businesses (SMBs) with underperforming social media.
 
+Focus on companies likely to benefit from expert marketing services.
+
+Build a data-driven lead generation pipeline using Python, web scraping, and machine learning.
+
+<h3>🧭 Target Criteria</h3>
+Industries: Marketing Tech, Fitness Tech, Solar Energy, Roofing, Home Remodeling, General Contracting
+
+Location: USA-based businesses, especially in:
+
+Denver, CO
+
+San Jose, CA
+
+Austin & Dallas, TX
+
+Phoenix, AZ
+
+Size: Fewer than 200 employees
 ---
 
-In the bustling world of social media and online marketing, our agency recognized a golden opportunity. We knew that small to medium-sized businesses often struggle to make their mark in the digital space, despite their best efforts. With this in mind, we set out to identify and assist these hidden gems, bringing our seasoned marketing magic to their doorsteps.
+<h2>📊 Project Workflow</h2>
 
-Phase 1: Setting the Stage
+<h3>🔹 Phase 1: Industry & Region Targeting</h3>
+Defined industries and U.S. business hubs most likely to need marketing help. Focused on regions rich in entrepreneurship.
 
-We began by zeroing in on companies within specific industries: marketing tech, fitness tech, solar energy, roofing, home remodeling, and general contracting. These sectors were chosen not only for their growth potential but also for the unique marketing challenges they face. Our geographical focus was on vibrant business hubs across the USA, such as Denver, Colorado; San Jose; Austin, Texas; Dallas, Texas; and Phoenix. These regions, teeming with entrepreneurial spirit, offered a fertile ground for our endeavors. Additionally, we targeted businesses with no more than 200 employees, aiming to support startups and small to medium-sized enterprises.
+<h3>🔹 Phase 2: LinkedIn Scraping</h3>
+Used Python scripts to gather:
 
-Phase 2: Gathering Intelligence
+Company names
 
-With our targets defined, we deployed a Python script to scour LinkedIn for relevant data. We meticulously gathered information on company names, websites, founding years, company sizes, and headquarters locations. Our digital net captured around 1,000 companies, each a potential beneficiary of our expertise.
+Websites
 
-Phase 3: The Instagram Quest
+Founding years
 
-Next, we turned our attention to Instagram, the social media powerhouse. From company websites, we verified whether they had Instagram accounts. For those that did, we scraped valuable data: follower counts, last post dates, likes, and comments. This step was crucial in understanding their current social media engagement.
+Team sizes
 
-Phase 4: Sifting for Gems
+Headquarters locations
+📦 Result: ~1,000 potential business leads collected
 
-Armed with Instagram data, we focused on companies that were actively posting but struggling to gain traction. These businesses, we knew, were keen on boosting their social media presence but needed the right push. We further validated their potential by checking Google reviews, ensuring they had quality products and services, yet faced challenges in reaching a broader audience.
+<h3>🔹 Phase 3: Instagram Analysis</h3>
+Extracted Instagram engagement metrics for each company:
 
-Phase 5: Connecting the Dots
+Follower count
 
-From this refined list, we turned to Apollo to gather detailed contact information. Emails, phone numbers, names, and roles within these companies were carefully compiled. By the end, we had identified 22 prime leads: 11 in solar energy, 2 in fitness tech, 3 in roofing, 4 in general contracting, 1 in marketing tech, and 1 in home remodeling.
+Last post date
 
-Phase 6: The Power of Prediction
+Likes and comments
 
-As a final touch, we harnessed the power of machine learning. Our beta model analyzed Instagram metrics—followers, likes, comments, and posting activity—alongside business model data. The model flagged companies that, despite recent activity, had low engagement, highlighting them as ideal candidates for our services.
+<h3>🔹 Phase 4: Lead Qualification</h3>
+Selected companies that:
 
+Were actively posting
+
+Had low engagement
+
+Had strong Google reviews (indicating good service/product)
+
+<h3>🔹 Phase 5: Contact Info Enrichment</h3>
+Used Apollo.io to enrich leads with:
+
+Emails
+
+Phone numbers
+
+Key team members (names, roles)
+
+<h3>📌 Final Output: 22 qualified leads</h3>
+
+Solar Energy: 11
+
+Fitness Tech: 2
+
+Roofing: 3
+
+General Contracting: 4
+
+Marketing Tech: 1
+
+Home Remodeling: 1
 ---
+<h2>🤖 Machine Learning Component</h2>
+To scale and refine lead selection, we built a classification model that predicts which companies are strong candidates for social media help.
 
-Through this structured yet dynamic approach, we not only identified businesses in need but also demonstrated our agency’s capability to turn social media struggles into success stories. This project underscored our commitment to helping small and medium-sized enterprises thrive in the digital age, leveraging our unparalleled expertise to drive engagement and sales.
+<h3>📁 Data Preprocessing</h3>
+Manually labeled companies based on engagement and business models
 
----
+Noted lack of high-engagement data
 
-Technical Overview: Machine Learning Model Development
+<h3>🧪 Data Augmentation</h3>
+Synthetic Data Generation
 
-After filtering our data, we moved to the preprocessing phase and began manually verifying and labeling companies according to their business models. However, we quickly encountered a challenge: there was insufficient data on companies with good social media engagement. To address this, we took several technical steps:
+Followers: Randomly generated [3,000–25,000]
 
-Data Augmentation:
+Likes: 5–18% of follower count
 
-1. Synthetic Data Generation:
-   - Followers: Generated random follower counts between 3,000 and 25,000.
-   - Last Post Interactions: Set interactions (likes) to range between 5% and 18% of the follower count.
-   - Comments: Assigned comments to range between 5% and 10% of the follower count.
+Comments: 5–10% of follower count
 
-2. Addressing Data Imbalance:
-   - Despite generating synthetic data, our dataset remained small.
-   - Applied Synthetic Minority Over-sampling Technique (SMOTE) to oversample the minority class, ensuring a more balanced dataset.
+Imbalanced Data Handling
 
-Model Development:
+Applied SMOTE (Synthetic Minority Over-sampling Technique) to balance the dataset
 
-3. Model Selection:
-   - Chose AdaBoosting with a Decision Tree estimator due to its robustness and ability to handle our varied data.
+<h3>🛠 Model Development</h3>
+Model Chosen: AdaBoostClassifier with DecisionTree base estimator
+(Chosen for its performance on small, noisy datasets)
 
-4. Hyperparameter Tuning:
-   - Utilized GridSearchCV to fine-tune the model’s parameters, optimizing its performance.
+Hyperparameter Tuning:
+Used GridSearchCV for optimal settings
 
-Model Evaluation:
-
-5. Performance Metrics:
-   - Achieved 100% accuracy, precision, and recall on both training and test datasets.
-   - Although these results suggest overfitting, the model performed as expected given the small dataset size.
-
-By generating synthetic data and using advanced techniques like SMOTE and GridSearchCV, we built a model capable of identifying companies with low engagement but recent activity. This model is a critical tool in pinpointing businesses that could benefit from our marketing agency's expertise.
-
+<h3>📈 Model Evaluation</h3>
+Achieved 100% accuracy, precision, and recall on both training and test sets
+⚠️ Note: High performance due to small dataset; potential overfitting acknowledged
