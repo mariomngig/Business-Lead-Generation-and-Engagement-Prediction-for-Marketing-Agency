@@ -23,6 +23,7 @@ Austin & Dallas, TX
 Phoenix, AZ
 
 Size: Fewer than 200 employees
+
 ---
 
 <h2>📊 Project Workflow</h2>
@@ -84,6 +85,7 @@ General Contracting: 4
 Marketing Tech: 1
 
 Home Remodeling: 1
+
 ---
 <h2>🤖 Machine Learning Component</h2>
 To scale and refine lead selection, we built a classification model that predicts which companies are strong candidates for social media help.
