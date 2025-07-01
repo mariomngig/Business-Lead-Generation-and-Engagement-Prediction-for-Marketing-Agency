@@ -93,6 +93,8 @@ Defined industries and U.S. business hubs most likely to need marketing help. Fo
 
 * Home Remodeling: 1
 
+---
+
 <h2>🤖 Machine Learning Component</h2>
 To scale and refine lead selection, we built a classification model that predicts which companies are strong candidates for social media help.
 
@@ -125,4 +127,5 @@ Hyperparameter Tuning:
 
 <h2>📈 Model Evaluation</h2>
 * Achieved 100% accuracy, precision, and recall on both training and test sets
+
 * ⚠️ Note: High performance due to small dataset; potential overfitting acknowledged
