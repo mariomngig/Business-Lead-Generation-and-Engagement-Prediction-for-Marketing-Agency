@@ -1,5 +1,6 @@
 <h1>📈 Business Lead Generation for a Marketing Agency</h1>
 <b>Overview</b>
+
 This project was designed to generate high-quality business leads for a marketing agency with over 15 years of experience in copywriting and content marketing. The agency specializes in increasing social media engagement and driving sales for products and services. Our mission: identify businesses with strong offerings but weak digital presence—and connect them with the right help.
 
 <h2>🚀 Project Goals</h2>
@@ -42,11 +43,11 @@ Defined industries and U.S. business hubs most likely to need marketing help. Fo
 
   - Founding years
 
-  -Team sizes
+  - Team sizes
 
   - Headquarters locations
 
-* 📦 Result: ~1,000 potential business leads collected
+<b>📦 Result: ~1,000 potential business leads collected</b>
 
 <h3>🔹 Phase 3: Instagram Analysis</h3>
 
